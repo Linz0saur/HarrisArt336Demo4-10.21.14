@@ -13,3 +13,55 @@ styled using ID selectors but take the time to think about
 the elements that are common across all components of the page
 and use class selectors where appropriate.
 */
+
+nav[role="navigation"]{
+    background-color: $color;
+    margin-bottom: $gutters;
+    min-height: 25px;
+}
+
+ header[role="banner"]{
+     background-color: lighten($color,35%);
+     color: #fff;
+ }
+
+.banner-logo {
+    box-sizing: border-box;
+    float: left;
+    padding: $gutters;
+    width: 24%;
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+}
+
+.banner-logo svg {
+    width: 110%;
+}
+
+.banner-text {
+    box-sizing: border-box;
+    float: left;
+    padding: $gutters;
+    width: 76%;
+    //allows to shrink for mobile stacking
+     @media (max-width: 480px) {
+        width: 100%;
+    }
+}
+//set image as background
+.work {
+    background: url('../img/seattle.jpg') no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    
+}
+
+//groups everything together
+.group:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+     
+     
